@@ -35,7 +35,8 @@ contract SimpleStorage {
 
     // If a gas calling function calls a view or pure function - only then will it cost gas
 
-    function store(uint256 _favouriteNumber) public {
+    // We can use the virtual keyword on funtions so that they can be overwritten from another contract if need be
+    function store(uint256 _favouriteNumber) public virtual {
         favouriteNumber = _favouriteNumber;
         // uint256 testVar = 5;
 
